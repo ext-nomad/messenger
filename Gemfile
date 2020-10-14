@@ -29,4 +29,6 @@ group :test do
   gem 'webdrivers'
 end
 
+gem 'jquery-rails'
+gem 'semantic-ui-sass'
 gem 'slim-rails'

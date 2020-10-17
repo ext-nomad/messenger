@@ -1,0 +1,21 @@
+.ui.small.inverted.menu.header
+  .ui.container
+    = link_to  "Chatroom", root_path, class: "item #{'active' if current_page?(root_path)}"
+
+    / = link_to  "Chatroom", login_path, class: "item #{'active' if current_page?(login_path)}"
+    .right.menu
+      / .ui.dropdown.item
+      /   | Account
+      /   i.dropdown.icon
+      /   .menu
+      /     a.item Log In
+      /     a.item Log Out
+      /     a.item Sign Up
+      .item
+        .ui.inverted.orange.button.dropdown 
+          | Account
+          i.dropdown.icon
+          .menu
+            = link_to  "Log In", login_path, class: "item #{'active' if current_page?(login_path)}"
+            a.item Log Out
+            a.item Sign Up

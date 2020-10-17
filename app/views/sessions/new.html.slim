@@ -1,4 +1,27 @@
-h1
-  | Sessions#new
-p
-  | Find me in app/views/sessions/new.html.erb
+h1.ui.center.aligned.header
+  | Welcome to Messenger - a complete Chat App
+h4.ui.center.aligned.medium.icon.header
+  i.circular.power.on.orange.icon
+  | Log in to continue
+
+.ui.placeholder.segment
+  .ui.two.column.very.relaxed.stackable.grid
+    .column
+      .ui.form
+        .field
+          label Username
+          .ui.left.icon.input
+            input placeholder="Username" type="text" /
+            i.user.icon
+        .field
+          label Password
+          .ui.left.icon.input
+            input placeholder="Password" type="password" /
+            i.lock.icon
+        .ui.orange.submit.button Login
+    .middle.aligned.column
+      .ui.big.inverted.orange.button
+        i.signup.icon
+        | Sign Up
+  .ui.vertical.divider
+    | Or

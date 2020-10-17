@@ -1,4 +1,35 @@
-h1
-  | Home#index
-p
-  | Find me in app/views/home/index.html.erb
+h4.ui.center.aligned.medium.icon.header
+  i.circular.coffee.orange.icon
+  | Say something
+
+
+.ui.two.column.grid
+
+  .twelve.wide.column
+    .ui.fluid.raised.card.chatbox
+      .content
+        .ui.feed
+          .event
+            .content
+              .summary
+                em first person:
+                |  Wallmart
+                .date Today
+      .extra.content
+        .ui.reply.form
+          .field
+            .ui.fluid.icon.input
+              input.text 
+              / .ui.bordered.inverted.yellow.icon.button
+              i.icon.edit
+                / | Send
+
+  .four.wide.column
+
+    .ui.fluid.raised.card.chatbox.inverted.vertical.menu 
+      a.item
+        | first person
+      a.item
+        | second person
+      a.item
+        | third person

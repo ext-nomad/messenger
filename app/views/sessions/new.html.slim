@@ -7,18 +7,7 @@ h4.ui.center.aligned.medium.icon.header
 .ui.placeholder.segment
   .ui.two.column.very.relaxed.stackable.grid
     .column
-      .ui.form
-        .field
-          label Username
-          .ui.left.icon.input
-            input placeholder="Username" type="text" /
-            i.user.icon
-        .field
-          label Password
-          .ui.left.icon.input
-            input placeholder="Password" type="password" /
-            i.lock.icon
-        .ui.orange.submit.button Login
+      = render 'sessions/form'
     .middle.aligned.column
       .ui.big.inverted.orange.button
         i.signup.icon

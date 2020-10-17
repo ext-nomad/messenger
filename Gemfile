@@ -30,6 +30,7 @@ group :test do
 end
 
 gem 'bcrypt'
+gem 'hirb'
 gem 'jquery-rails'
 gem 'semantic-ui-sass'
 gem 'slim-rails'

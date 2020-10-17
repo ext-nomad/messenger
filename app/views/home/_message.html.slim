@@ -1,0 +1,9 @@
+.event
+  .content
+    .summary
+      em= msg.user.username
+      | : 
+      = msg.content
+      .date
+        = time_ago_in_words(msg.created_at)
+        |  ago

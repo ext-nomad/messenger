@@ -1,0 +1,12 @@
+= form_for(:session, html: {class: 'ui form', role: 'form'}, url: login_path) do |f| 
+  .field
+    = f.label :username
+    .ui.left.icon.input
+      = f.text_field :username, placeholder: "Username"
+      i.user.icon
+  .field
+    = f.label :password
+    .ui.left.icon.input
+      = f.text_field :password, placeholder: "Password"
+      i.lock.icon
+  = f.submit 'Login', class: 'ui orange submit button'

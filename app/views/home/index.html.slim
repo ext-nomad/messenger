@@ -9,12 +9,8 @@ h4.ui.center.aligned.medium.icon.header
     .ui.fluid.raised.card.chatbox
       .content
         .ui.feed
-          .event
-            .content
-              .summary
-                em first person:
-                |  Wallmart
-                .date Today
+          - @messages.each do |msg|
+            = render 'home/message', msg: msg
       .extra.content
         .ui.reply.form
           .field
@@ -27,9 +23,5 @@ h4.ui.center.aligned.medium.icon.header
   .four.wide.column
 
     .ui.fluid.raised.card.chatbox.inverted.vertical.menu 
-      a.item
-        | first person
-      a.item
-        | second person
-      a.item
-        | third person
+      - @users.each do |user|
+        = render 'home/user', user: user

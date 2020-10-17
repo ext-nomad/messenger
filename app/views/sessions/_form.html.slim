@@ -1,4 +1,4 @@
-= form_for(:session, html: {class: 'ui form', role: 'form'}, url: login_path) do |f| 
+= form_for(model, html: {class: 'ui form'}, url: path) do |f| 
   .field
     = f.label :username
     .ui.left.icon.input

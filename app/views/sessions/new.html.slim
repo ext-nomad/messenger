@@ -7,7 +7,7 @@ h4.ui.center.aligned.medium.icon.header
 .ui.placeholder.segment
   .ui.two.column.very.relaxed.stackable.grid
     .column
-      = render 'sessions/form'
+      = render 'sessions/form', model: :session, path: login_path
     .middle.aligned.column
       .ui.big.inverted.orange.button
         i.signup.icon

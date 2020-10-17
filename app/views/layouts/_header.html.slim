@@ -1,14 +1,8 @@
 .ui.small.inverted.menu.header
   .ui.container
-    = link_to  "Chatroom", root_path, class: "item #{'active' if current_page?(root_path)}"
+    - if logged_in?
+      = link_to  "Chatroom", root_path, class: "item #{'active' if current_page?(root_path)}"
     .right.menu
-      / .ui.dropdown.item
-      /   | Account
-      /   i.dropdown.icon
-      /   .menu
-      /     a.item Log In
-      /     a.item Log Out
-      /     a.item Sign Up
       .item
         .ui.inverted.orange.button.dropdown
           - if logged_in?

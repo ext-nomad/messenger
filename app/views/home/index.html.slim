@@ -12,13 +12,14 @@ h4.ui.center.aligned.medium.icon.header
           - @messages.each do |msg|
             = render 'home/message', msg: msg
       .extra.content
-        .ui.reply.form
+        = form_for(@message, html: {class: 'ui reply form'}, url: message_path) do |f| 
           .field
             .ui.fluid.icon.input
-              input.text 
+              = f.text_field :content
               / .ui.bordered.inverted.yellow.icon.button
-              i.icon.edit
-                / | Send
+              / i.icon.edit
+              = f.button '<i class="icon edit orange inverted"></i>'.html_safe
+
 
   .four.wide.column
 

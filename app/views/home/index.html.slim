@@ -7,17 +7,17 @@ h4.ui.center.aligned.medium.icon.header
 
   .twelve.wide.column
     .ui.fluid.raised.card.chatbox
-      .content
-        .ui.feed
+      div class='content' id='messages'
+        div class='ui feed' id='message-container'
           - @messages.each do |msg|
             = render 'home/message', msg: msg
       .extra.content
-        = form_for(@message, html: {class: 'ui reply form'}, url: message_path) do |f| 
+        = form_for(@message, html: {class: 'ui reply form'}, url: message_path, remote: true) do |f| 
           .field
             .ui.fluid.icon.input
               = f.text_field :content
               / .ui.bordered.inverted.yellow.icon.button
-              / i.icon.edit
+              / i.icon.edit.orange
               = f.button '<i class="icon edit orange inverted"></i>'.html_safe
 
 

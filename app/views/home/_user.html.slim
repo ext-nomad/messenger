@@ -1,1 +1,3 @@
-= link_to  user.username, root_path, class: "#{logged_in? && current_user == user ? 'item active orange' : 'item'}"
+- if user.status?
+  = link_to  user.username, root_path, class: "#{logged_in? && current_user == user ? 'item active orange' : 'item'}"
+

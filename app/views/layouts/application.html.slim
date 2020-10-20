@@ -9,7 +9,15 @@ html
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   body
-  = render 'layouts/header'
-  .ui.container
-    = render 'layouts/messages'
-    = yield
+    header
+      = render 'layouts/header'
+
+    main
+      .ui.container
+        = render 'layouts/messages'
+        = yield
+
+    footer
+      = render 'layouts/footer'
+
+

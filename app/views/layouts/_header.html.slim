@@ -1,4 +1,4 @@
-.ui.small.inverted.menu.header
+.ui.pointing.small.inverted.menu
   .ui.container
     - if logged_in?
       = link_to  "Chatroom", root_path, class: "item #{'active' if current_page?(root_path)}"

@@ -1,0 +1,14 @@
+.ui.vertical.footer.segment
+  .ui.center.aligned.container
+    .ui.stackable.grid
+      .seven.wide.column
+        h4.ui.header.grey
+          | © 
+          = Time.now.year
+          |  SPb. @ 59.799,30.637
+      .three.wide.right.floated.column
+        .ui.link.list
+          = mail_to 'i.dwanderer@gmail.com', 'i.dwanderer@gmail.com', class: 'item'
+      .three.wide.right.floated.column
+        .ui.link.list
+          a.item href="https://github.com/ext-nomad"  GitHub

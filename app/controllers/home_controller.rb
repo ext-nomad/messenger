@@ -4,6 +4,6 @@ class HomeController < ApplicationController
   def index
     @message = Message.new
     @users = User.all
-    @messages = Message.all
+    @messages = Message.latest
   end
 end

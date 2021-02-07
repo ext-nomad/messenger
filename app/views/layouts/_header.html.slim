@@ -2,6 +2,7 @@
   .ui.container
     - if logged_in?
       = link_to  "Chatroom", root_path, class: "item #{'active' if current_page?(root_path)}"
+      = link_to  "History", history_path, class: "item #{'active' if current_page?(history_path)}"
     .right.menu
       .item
         .ui.inverted.orange.button.dropdown

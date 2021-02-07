@@ -1,0 +1,11 @@
+h4.ui.center.aligned.medium.icon.header
+  i.circular.history.orange.icon
+  = "History of #{@current_user.username}'s messages"
+
+.ui.fluid.raised.card.chatbox
+  div class='content' id='messages'
+    div class='ui feed' id='message-container'
+      - @current_user.messages.each do |msg|
+        = render 'home/message', msg: msg
+
+= link_to  "clear history", clear_history_path

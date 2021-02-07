@@ -6,7 +6,7 @@ class MessagesController < ApplicationController
     if message.save
       ActionCable.server.broadcast('chat_channel', message: message_render(message))
     else
-      redirect_to root_path, alert: 'Message cant be empty and should be under 50 characters long'
+      redirect_to root_path, alert: 'Something went wrong'
     end
   end
 
